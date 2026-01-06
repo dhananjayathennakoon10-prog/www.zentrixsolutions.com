@@ -190,7 +190,7 @@ footer{text-align:center;padding:40px;color:#64748b;}
   <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
-    <a href="previos works.html">Services</a>
+    <a href="previos works.html">Previous Works</a>
     <a href="#contact">Contact</a>
   </nav>
 
