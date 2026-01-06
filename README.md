@@ -166,14 +166,60 @@ form button{
   font-weight:600;cursor:pointer;
 }
 
-/* FOOTER */
-footer{text-align:center;padding:40px;color:#64748b;}
-
-@media(max-width:768px){
-  nav{display:none;}
-  .menu-btn{display:block;}
-  .hero h1{font-size:34px;}
+.site-footer{
+  margin:120px auto 40px;
+  max-width:1100px;
+  padding:60px 40px;
+  text-align:center;
+  background:rgba(255,255,255,.45);
+  backdrop-filter:blur(14px);
+  border-radius:28px;
+  border:1px solid rgba(255,255,255,.35);
+  box-shadow:0 20px 45px rgba(0,0,0,.08);
 }
+
+body.dark .site-footer{
+  background:rgba(2,6,23,.55);
+}
+
+.site-footer h3{
+  font-size:26px;
+  letter-spacing:2px;
+  margin-bottom:16px;
+}
+
+.footer-text{
+  color:#64748b;
+  font-size:16px;
+  max-width:800px;
+  margin:0 auto 24px;
+  line-height:1.7;
+}
+
+.footer-details p{
+  margin:6px 0;
+  font-size:15px;
+}
+
+.footer-tagline{
+  margin-top:24px;
+  font-weight:600;
+  color:#38bdf8;
+}
+
+.footer-bottom{
+  margin-top:30px;
+  font-size:14px;
+  color:#64748b;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .site-footer{
+    padding:40px 24px;
+  }
+}
+
 </style>
 </head>
 
@@ -210,7 +256,11 @@ footer{text-align:center;padding:40px;color:#64748b;}
 
 <section id="about">
   <h2>About Us</h2>
-  <p>Zentrix Solutions builds premium modern websites with smooth UI and animations.</p>
+  <p>We provide modern web development and AI-powered solutions designed to help businesses grow in the digital world.
+
+Our work focuses on building fast, secure, and visually clean websites, along with intelligent AI systems that improve efficiency and automation. We believe in using the latest technologies to create smart, reliable, and user-friendly digital products.
+
+At Zentrix Solutions, our goal is to deliver high-quality solutions, strong performance, and long-term value for our clients.</p>
 </section>
 
 <section id="services">
@@ -232,7 +282,31 @@ footer{text-align:center;padding:40px;color:#64748b;}
   </form>
 </section>
 
-<footer>© 2026 Zentrix Solutions</footer>
+<footer class="site-footer">
+  <div class="footer-content">
+    <h3>ZENTRIX SOLUTIONS</h3>
+
+    <p class="footer-text">
+      Co-founded by a passionate leadership team and supported by skilled web developers
+      and AI specialists, Zentrix Solutions delivers modern, reliable, and high-quality
+      digital solutions for businesses.
+    </p>
+
+    <div class="footer-details">
+      <p><strong>Co-Founder:</strong> Your Name</p>
+      <p><strong>Team:</strong> Web Developers · UI/UX Designers · AI Engineers</p>
+    </div>
+
+    <p class="footer-tagline">
+      Creating smart digital experiences for the future.
+    </p>
+
+    <div class="footer-bottom">
+      © 2026 Zentrix Solutions. All rights reserved.
+    </div>
+  </div>
+</footer>
+
 
 <script>
 function toggleDark(){document.body.classList.toggle("dark");}
