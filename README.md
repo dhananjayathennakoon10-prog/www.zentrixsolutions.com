@@ -199,11 +199,7 @@ footer{text-align:center;padding:40px;color:#64748b;}
   </div>
 </header>
 
-<div class="mobile-menu" id="menu">
-  <a href="#about" onclick="toggleMenu()">About</a>
-  <a href="#services" onclick="toggleMenu()">Services</a>
-  <a href="#contact" onclick="toggleMenu()">Contact</a>
-</div>
+
 
 <section class="hero show">
   <h1>Modern Web Development</h1>
