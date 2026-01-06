@@ -408,27 +408,19 @@ At Zentrix Solutions, our goal is to deliver high-quality solutions, strong perf
 
     <div class="team-card">
       <img src="team1.jpg" alt="Co-Founder">
-      <h4>Dilshan Abeygunawardhana</h4>
+      <h4>Dhananjaya Thennakoon</h4>
       <span>Co-Founder</span>
     </div>
 
     <div class="team-card">
       <img src="team2.jpg" alt="Co-Founder">
-      <h4>Dileepa Jayawardena</h4>
-      <span>Co-Founder</span>
-    </div>
-
-    <div class="team-card">
-      <img src="team3.jpg" alt="Senior Consultant">
-      <h4>Kosala Jayasekara</h4>
+      <h4>Adheesha Bandara</h4>
       <span>Senior Consultant</span>
     </div>
 
-    <div class="team-card">
-      <img src="team4.jpg" alt="Senior Consultant">
-      <h4>Malinda Alahakoon</h4>
-      <span>Senior Consultant</span>
-    </div>
+   
+
+    
 
   </div>
 </section>
