@@ -376,6 +376,120 @@ Our work focuses on building fast, secure, and visually clean websites, along wi
 At Zentrix Solutions, our goal is to deliver high-quality solutions, strong performance, and long-term value for our clients.</p>
 </section>
 
+<!-- ================= STATS COUNTER SECTION ================= -->
+<section class="stats-section">
+
+  <div class="stats-box">
+
+    <div class="stat">
+      <h2 class="count" data-target="3">0</h2>
+      <p>Years of Operation</p>
+    </div>
+
+    <div class="stat">
+      <h2 class="count" data-target="10">0</h2>
+      <p>Worldwide Clients</p>
+    </div>
+
+    <div class="stat">
+      <h2 class="count" data-target="200">0</h2>
+      <p>Successful Projects</p>
+    </div>
+
+    <div class="stat">
+      <h2 class="count" data-target="4">0</h2>
+      <p>Sectors Revolutionized</p>
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+/* ================= STATS SECTION ================= */
+.stats-section{
+  max-width:1100px;
+  margin:120px auto;
+  padding:20px;
+}
+
+.stats-box{
+  background:#0f172a;
+  border-radius:40px;
+  padding:55px 30px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+  text-align:center;
+  color:#fff;
+}
+
+/* STAT ITEM */
+.stat h2{
+  font-size:44px;
+  font-weight:700;
+  color:#38bdf8;
+}
+
+.stat p{
+  margin-top:8px;
+  font-size:14px;
+  opacity:.8;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .stats-box{
+    border-radius:25px;
+    padding:40px 20px;
+  }
+  .stat h2{
+    font-size:34px;
+  }
+}
+</style>
+
+<script>
+const counters = document.querySelectorAll('.count');
+let started = false;
+
+function startCounter(){
+  if(started) return;
+  counters.forEach(counter=>{
+    const target = +counter.dataset.target;
+    let current = 0;
+    const step = target / 80;
+
+    const update = () => {
+      current += step;
+      if(current < target){
+        counter.innerText = Math.ceil(current);
+        requestAnimationFrame(update);
+      }else{
+        counter.innerText = target + "+";
+      }
+    };
+    update();
+  });
+  started = true;
+}
+
+/* START ON SCROLL */
+const statsSection = document.querySelector('.stats-section');
+
+const observer = new IntersectionObserver(entries=>{
+  if(entries[0].isIntersecting){
+    startCounter();
+  }
+},{threshold:0.4});
+
+observer.observe(statsSection);
+</script>
+
+
+
+
+
 <section id="services">
   <h2>Our Services</h2>
   <div class="grid">
