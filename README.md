@@ -499,6 +499,8 @@ observer.observe(statsSection);
     <div class="card">Landing Pages</div>
     <div class="card">E-Commerce</div>
     <div class="card">Redesign</div>
+    <div class="card">Small Business Sites</div>
+    <div class="card">Physical Stores Sites</div>
   </div>
 </section>
 
