@@ -527,9 +527,9 @@ observer.observe(statsSection);
     </div>
 
     <div class="team-card">
-      <img src="1767770931976.jpg" alt="Co-Founder">
+      <img src="1767770931976.jpg" alt="Senior Consultant">
       <h4>Adheesha Bandara</h4>
-      <span>Co-Founder</span>
+      <span>Senior Consultant</span>
     </div>
 
    <div class="team-card">
