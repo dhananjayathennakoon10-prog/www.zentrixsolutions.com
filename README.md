@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zentrix Solutions</title>
 
-<link rel="icon" type="image/png" href="hWhatsApp Image 2026-01-09 at 1.40.39 AM.jpeg">
+<link rel="icon" type="image/png" href="abstract-logo-icon-design-template-elements-with-letter-z-free-vector (1).jpg">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
