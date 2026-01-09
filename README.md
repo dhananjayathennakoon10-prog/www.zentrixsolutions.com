@@ -523,7 +523,7 @@ observer.observe(statsSection);
     </a>
 
     <a href="ecommerce.html" class="card service-card">
-      <h5>E-Commerce</h4>
+      <h4>E-Commerce</h4>
       
     </a>
 
@@ -533,12 +533,12 @@ observer.observe(statsSection);
     </a>
 
     <a href="small-business.html" class="card service-card">
-      <h4>Small Business Sites</h4>
+      <h3>Small Business Sites</h3>
       
     </a>
 
     <a href="physical-stores.html" class="card service-card">
-      <h4>Physical Store Sites</h4>
+      <h3>Physical Store Sites</h3>
       
     </a>
 
