@@ -528,17 +528,17 @@ observer.observe(statsSection);
     </a>
 
     <a href="redesign.html" class="card service-card">
-      <h3>Website Redesign</h3>
+      <h4>Website Redesign</h4>
       
     </a>
 
     <a href="small-business.html" class="card service-card">
-      <h3>Small Business Sites</h3>
+      <h4>Small Business Sites</h4>
       
     </a>
 
     <a href="physical-stores.html" class="card service-card">
-      <h3>Physical Store Sites</h3>
+      <h4>Physical Store Sites</h4>
       
     </a>
 
