@@ -334,6 +334,18 @@ body.dark .site-footer{
   }
 }
 
+  .service-card{
+  display:block;
+  text-decoration:none;
+  color:inherit;
+  cursor:pointer;
+}
+
+.service-card:hover{
+  transform:translateY(-10px);
+}
+
+
 
 </style>
 </head>
@@ -494,15 +506,45 @@ observer.observe(statsSection);
 
 <section id="services">
   <h2>Our Services</h2>
-  <div class="grid">
-    <div class="card">Website Development</div>
-    <div class="card">Landing Pages</div>
-    <div class="card">E-Commerce</div>
-    <div class="card">Redesign</div>
-    <div class="card">Small Business Sites</div>
-    <div class="card">Physical Stores Sites</div>
+  <p class="services-sub">
+    Explore our professional services in detail.
+  </p>
+
+  <div class="grid services-grid">
+
+    <a href="web-development.html" class="card service-card">
+      <h3>Website Development</h3>
+      <p>Custom modern websites built for performance.</p>
+    </a>
+
+    <a href="landing-pages.html" class="card service-card">
+      <h3>Landing Pages</h3>
+      <p>High-conversion pages designed to get results.</p>
+    </a>
+
+    <a href="ecommerce.html" class="card service-card">
+      <h3>E-Commerce</h3>
+      <p>Secure and scalable online stores.</p>
+    </a>
+
+    <a href="redesign.html" class="card service-card">
+      <h3>Website Redesign</h3>
+      <p>Modern redesigns for outdated websites.</p>
+    </a>
+
+    <a href="small-business.html" class="card service-card">
+      <h3>Small Business Sites</h3>
+      <p>Affordable solutions for startups and local brands.</p>
+    </a>
+
+    <a href="physical-stores.html" class="card service-card">
+      <h3>Physical Store Sites</h3>
+      <p>Websites for shops, restaurants, and stores.</p>
+    </a>
+
   </div>
 </section>
+
 
 <section id="contact">
   <h2>Contact Us</h2>
