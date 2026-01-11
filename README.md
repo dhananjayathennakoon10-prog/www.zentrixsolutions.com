@@ -585,7 +585,7 @@ observer.observe(statsSection);
     </div>
 
   <div class="team-card">
-      <img src="              " alt="Project Manager">
+      <img src="       https://i.pinimg.com/originals/6e/59/95/6e599501252c23bcf02658617b29c894.jpg?nii=t       " alt="Project Manager">
       <h4>Job Vacancie</h4>
       <span>Project Manager</span>
     </div>
