@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sell Hub - Online Store</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #0f0f0f;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Background animation */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, #ff4d4d, #ff9900, #1a1a1a);
+            animation: moveBG 30s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes moveBG {
+            0% { transform: translate(0, 0); }
+            50% { transform: translate(-25%, -25%); }
+            100% { transform: translate(0, 0); }
+        }
+
+        header {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+            gap: 20px;
+        }
+
+        .nav-buttons a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            background: rgba(255, 77, 77, 0.8);
+            border-radius: 20px;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        .nav-buttons a:hover {
+            transform: scale(1.1);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            animation: fadeIn 3s ease-in-out infinite alternate;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .card h3 {
+            margin: 15px 0 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff4d4d;
+            color: white;
+            border-radius: 30px;
+            margin-top: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Sell Hub</h1></header>
+
+    <div class="nav-buttons">
+        <a href="file:///C:/Users/Dell/Documents/selling%20site/profile.html">Profile</a>
+        <a href="file:///C:/Users/Dell/Documents/selling%20site/test.html">Offers</a>
+        <a href="file:///C:/Users/Dell/Documents/selling%20site/loging.html">Login</a>
+    </div>
+
+    <section class="hero">
+        <h1>Welcome to Sell Hub</h1>
+        <p>Buy anything you love — Simple, Fast & Stylish</p>
+    </section>
+
+
+    <br>
+
+
+    
+
+    <section class="products">
+        <div class="card">
+            <img src="https://i.ebayimg.com/images/g/w-IAAOSweAxhYTZ1/s-l500.webp" />
+            <h3>Tools</h3>
+            <p>15%</p>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+
+        <div class="card">
+            <img src="https://i.ebayimg.com/images/g/RpsAAOSw5fFnf2U-/s-l500.webp" />
+            <h3>Home Products</h3>
+            <p>10%</p>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+
+        <div class="card">
+            <img src="https://i.ebayimg.com/images/g/3UgAAeSwg4ZowqyB/s-l500.webp" />
+            <h3>Computers</h3>
+            <p>30%</p>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+    </section>
+
+    <br>
+         <section class="products">
+        <div class="card">
+            <img src="https://i.ebayimg.com/images/g/3EoAAeSwcPholJR4/s-l500.webp" />
+            <h3>Toys</h3>
+            <p>25%</p>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+
+        <div class="card">
+            <img src="https://i.ebayimg.com/images/g/poUAAeSw-GBpHOhS/s-l500.webp" />
+            <h3>Camping</h3>
+            <p>13%</p>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+
+        <div class="card">
+            <img src="https://i.ebayimg.com/images/g/ZCkAAeSwU95o4KFt/s-l500.webp" />
+            <h3>Shoes</h3>
+            <p>35%</p>
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+    </section>
+    
+</body>
+</html>

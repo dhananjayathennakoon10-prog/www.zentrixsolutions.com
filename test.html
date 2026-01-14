@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sell Hub - Offers</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0f0f0f;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Background animation (same as home page) */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, #ff4d4d, #ff9900, #1a1a1a);
+    animation: moveBG 30s linear infinite;
+    z-index: -1;
+}
+
+@keyframes moveBG {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(-25%, -25%); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Header */
+header {
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 20px;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background: rgba(255, 77, 77, 0.8);
+    border-radius: 20px;
+    font-weight: 600;
+    transition: transform 0.3s;
+}
+
+.nav-buttons a:hover {
+    transform: scale(1.1);
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: fadeIn 3s ease-in-out infinite alternate;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+/* Offers section */
+.offers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.offer-card {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.offer-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 77, 77, 0.5);
+}
+
+.offer-card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.offer-card h3 {
+    margin: 15px 0 5px;
+}
+
+.offer-card p {
+    color: #ccc;
+}
+
+.btn-offer {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff4d4d;
+    color: white;
+    border-radius: 30px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s;
+}
+
+.btn-offer:hover {
+    transform: scale(1.1);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<header>Sell Hub - Offers</header>
+
+<div class="nav-buttons">
+    <a href="file:///C:/Users/Dell/Documents/selling%20site/Home.html#profile">Home</a>
+    <a href="file:///C:/Users/Dell/Documents/selling%20site/profile.html">Profile</a>
+    <a href="file:///C:/Users/Dell/Documents/selling%20site/loging.html">Login</a>
+</div>
+
+<section class="hero">
+    <h1>Special Offers</h1>
+    <p>Check out our latest deals and discounts!</p>
+</section>
+
+<section class="offers">
+    <div class="offer-card">
+        <img src="images/offer1.jpg" alt="Offer 1">
+        <h3>Discount Product 1</h3>
+        <p>Save 20% on this amazing product!</p>
+        <a href="#" class="btn-offer">Grab Now</a>
+    </div>
+
+    <div class="offer-card">
+        <img src="images/offer2.jpg" alt="Offer 2">
+        <h3>Discount Product 2</h3>
+        <p>Limited time 30% off!</p>
+        <a href="#" class="btn-offer">Grab Now</a>
+    </div>
+
+    <div class="offer-card">
+        <img src="images/offer3.jpg" alt="Offer 3">
+        <h3>Discount Product 3</h3>
+        <p>Buy 1 Get 1 Free Offer</p>
+        <a href="#" class="btn-offer">Grab Now</a>
+    </div>
+</section>
+
+</body>
+</html>
