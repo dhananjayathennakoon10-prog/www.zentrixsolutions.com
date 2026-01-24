@@ -362,7 +362,7 @@ body.dark .site-footer{
 
   <nav>
     <a href="#about">About</a>
-    <a href="#test.html">Updates</a>
+    <a href="test.html">Updates</a>
     <a href="#services">Services</a>
     <a href="#contact">Contact</a>
   </nav>
