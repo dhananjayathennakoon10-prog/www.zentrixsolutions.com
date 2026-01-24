@@ -3,185 +3,233 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sell Hub - Offers</title>
+<title>Zentrix Solutions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  color:#0f172a;
+  background:#f8fafc;
+}
+body.dark{background:#020617;color:#e5e7eb}
 
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #0f0f0f;
-    color: white;
-    overflow-x: hidden;
+/* BACKGROUND */
+.blur-bg{position:fixed;inset:0;z-index:-1}
+.blur-bg span{
+  position:absolute;width:420px;height:420px;border-radius:50%;
+  filter:blur(120px);opacity:.9;
+  background:radial-gradient(circle,#38bdf8,#3b82f6,transparent);
+  animation:move 14s linear infinite;
+}
+.blur-bg span:nth-child(1){top:10%;left:-15%}
+.blur-bg span:nth-child(2){top:40%;right:-20%;animation-duration:18s}
+.blur-bg span:nth-child(3){bottom:-20%;left:30%;animation-duration:22s}
+@keyframes move{to{transform:translate(600px,350px)}}
+
+/* HEADER */
+header{
+  position:fixed;top:18px;left:50%;transform:translateX(-50%);
+  width:92%;max-width:1200px;
+  padding:14px 28px;
+  display:flex;align-items:center;
+  background:rgba(255,255,255,.45);
+  backdrop-filter:blur(14px);
+  border-radius:22px;
+  z-index:1000;
+}
+body.dark header{background:rgba(2,6,23,.55)}
+.logo .big{font-size:28px;font-weight:700;letter-spacing:2px}
+.logo .small{font-size:12px;letter-spacing:4px;color:#64748b}
+.actions{margin-left:auto;cursor:pointer}
+
+/* SECTION */
+section{
+  max-width:1100px;
+  margin:160px auto;
+  padding:80px 40px;
+  background:rgba(255,255,255,.45);
+  backdrop-filter:blur(14px);
+  border-radius:28px;
+  text-align:center;
+}
+body.dark section{background:rgba(2,6,23,.55)}
+
+/* EDITOR */
+.post-editor{text-align:left;margin-bottom:50px}
+.post-editor input,
+.post-editor textarea{
+  width:100%;padding:14px;margin:10px 0;
+  border:none;border-radius:14px;font-family:inherit;
+}
+.post-editor button{
+  padding:14px 36px;border:none;border-radius:30px;
+  background:#38bdf8;color:#fff;font-weight:600;cursor:pointer;
+  transition:0.3s;
+}
+.post-editor button:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 28px rgba(56,189,248,0.3);
 }
 
-/* Background animation (same as home page) */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, #ff4d4d, #ff9900, #1a1a1a);
-    animation: moveBG 30s linear infinite;
-    z-index: -1;
+/* POSTS GRID */
+#postList{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
 }
 
-@keyframes moveBG {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(-25%, -25%); }
-    100% { transform: translate(0, 0); }
+/* POST CARD */
+.post-item{
+  background:rgba(255,255,255,.35);
+  backdrop-filter:blur(12px);
+  border-radius:22px;
+  padding:22px;
+  transition:.3s;
+  text-align:left;
+}
+body.dark .post-item{background:rgba(2,6,23,.55)}
+.post-item:hover{
+  transform:translateY(-8px);
+  box-shadow:0 18px 40px rgba(56,189,248,.35);
+}
+.post-item img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:14px;
+  margin-top:14px;
+}
+.post-item h3{font-size:18px;margin-bottom:6px}
+.post-item small{font-size:13px;color:#64748b}
+.post-item p{font-size:14px;margin-top:8px;line-height:1.6}
+
+/* POST BUTTONS GLASS STYLE */
+.post-actions{
+  display:flex;
+  gap:12px;
+  margin-top:12px;
+}
+.post-actions button{
+  flex:1;
+  padding:10px;
+  border:none;
+  border-radius:14px;
+  font-size:14px;
+  font-weight:500;
+  cursor:pointer;
+  background:rgba(255,255,255,0.35);
+  backdrop-filter:blur(10px);
+  color:#0f172a;
+  transition:0.3s;
+}
+body.dark .post-actions button{
+  background:rgba(2,6,23,0.5);
+  color:#e5e7eb;
+}
+.post-actions button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 20px rgba(56,189,248,0.25);
 }
 
-/* Header */
-header {
-    backdrop-filter: blur(15px);
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-/* Navigation buttons */
-.nav-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    gap: 20px;
-}
-
-.nav-buttons a {
-    text-decoration: none;
-    color: white;
-    padding: 10px 20px;
-    background: rgba(255, 77, 77, 0.8);
-    border-radius: 20px;
-    font-weight: 600;
-    transition: transform 0.3s;
-}
-
-.nav-buttons a:hover {
-    transform: scale(1.1);
-}
-
-/* Hero section */
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    margin: 20px;
-    border-radius: 20px;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    animation: fadeIn 3s ease-in-out infinite alternate;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    color: #ddd;
-}
-
-/* Offers section */
-.offers {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 40px;
-}
-
-.offer-card {
-    background: rgba(255, 255, 255, 0.12);
-    border-radius: 20px;
-    padding: 20px;
-    backdrop-filter: blur(10px);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.offer-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(255, 77, 77, 0.5);
-}
-
-.offer-card img {
-    width: 100%;
-    border-radius: 15px;
-}
-
-.offer-card h3 {
-    margin: 15px 0 5px;
-}
-
-.offer-card p {
-    color: #ccc;
-}
-
-.btn-offer {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #ff4d4d;
-    color: white;
-    border-radius: 30px;
-    margin-top: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: transform 0.3s;
-}
-
-.btn-offer:hover {
-    transform: scale(1.1);
-}
-
-/* Fade in animation */
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(-20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
+/* RESPONSIVE */
+@media(max-width:1000px){#postList{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){#postList{grid-template-columns:1fr}}
 </style>
 </head>
+
 <body>
 
-<header>Sell Hub - Offers</header>
+<div class="blur-bg"><span></span><span></span><span></span></div>
 
-<div class="nav-buttons">
-    <a href="file:///C:/Users/Dell/Documents/selling%20site/Home.html#profile">Home</a>
-    <a href="file:///C:/Users/Dell/Documents/selling%20site/profile.html">Profile</a>
-    <a href="file:///C:/Users/Dell/Documents/selling%20site/loging.html">Login</a>
+<header>
+  <div class="logo">
+    <div class="big">ZENTRIX</div>
+    <div class="small">SOLUTIONS</div>
+  </div>
+  <div class="actions" onclick="toggleDark()">🌙</div>
+</header>
+
+<section>
+<h2>Latest Updates</h2>
+
+<div class="post-editor">
+  <input id="postTitle" placeholder="Post title">
+  <textarea id="postContent" rows="4" placeholder="Write your update..."></textarea>
+  <input type="file" id="postImage" accept="image/*">
+  <button onclick="savePost()">Publish Post</button>
 </div>
 
-<section class="hero">
-    <h1>Special Offers</h1>
-    <p>Check out our latest deals and discounts!</p>
+<div id="postList"></div>
 </section>
 
-<section class="offers">
-    <div class="offer-card">
-        <img src="images/offer1.jpg" alt="Offer 1">
-        <h3>Discount Product 1</h3>
-        <p>Save 20% on this amazing product!</p>
-        <a href="#" class="btn-offer">Grab Now</a>
-    </div>
+<script>
+let editIndex=null;
 
-    <div class="offer-card">
-        <img src="images/offer2.jpg" alt="Offer 2">
-        <h3>Discount Product 2</h3>
-        <p>Limited time 30% off!</p>
-        <a href="#" class="btn-offer">Grab Now</a>
-    </div>
+function toggleDark(){document.body.classList.toggle("dark")}
 
-    <div class="offer-card">
-        <img src="images/offer3.jpg" alt="Offer 3">
-        <h3>Discount Product 3</h3>
-        <p>Buy 1 Get 1 Free Offer</p>
-        <a href="#" class="btn-offer">Grab Now</a>
-    </div>
-</section>
+function savePost(){
+  const title=postTitle.value;
+  const content=postContent.value;
+  const file=postImage.files[0];
+  if(!title||!content) return alert("Fill all fields");
+
+  const reader=new FileReader();
+  reader.onload=()=>{
+    const posts=JSON.parse(localStorage.getItem("zentrixPosts"))||[];
+
+    if(editIndex!==null){
+      posts[editIndex]={...posts[editIndex],title,content,image:reader.result||posts[editIndex].image};
+      editIndex=null;
+    }else{
+      posts.unshift({title,content,image:reader.result||"",date:new Date().toLocaleDateString()});
+    }
+
+    localStorage.setItem("zentrixPosts",JSON.stringify(posts));
+    postTitle.value=postContent.value=postImage.value="";
+    loadPosts();
+  };
+  file?reader.readAsDataURL(file):reader.onload();
+}
+
+function loadPosts(){
+  const posts=JSON.parse(localStorage.getItem("zentrixPosts"))||[];
+  postList.innerHTML="";
+  posts.forEach((p,i)=>{
+    postList.innerHTML+=`
+      <div class="post-item">
+        <h3>${p.title}</h3>
+        <small>${p.date}</small>
+        <p>${p.content}</p>
+        ${p.image?`<img src="${p.image}">`:""}
+        <div class="post-actions">
+          <button onclick="editPost(${i})">Edit</button>
+          <button onclick="deletePost(${i})">Delete</button>
+        </div>
+      </div>`;
+  });
+}
+
+function editPost(i){
+  const posts=JSON.parse(localStorage.getItem("zentrixPosts"));
+  postTitle.value=posts[i].title;
+  postContent.value=posts[i].content;
+  editIndex=i;
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function deletePost(i){
+  if(!confirm("Delete this post?")) return;
+  const posts=JSON.parse(localStorage.getItem("zentrixPosts"));
+  posts.splice(i,1);
+  localStorage.setItem("zentrixPosts",JSON.stringify(posts));
+  loadPosts();
+}
+
+loadPosts();
+</script>
 
 </body>
 </html>
